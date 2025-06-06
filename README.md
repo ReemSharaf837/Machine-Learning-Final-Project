@@ -1,5 +1,6 @@
 # Machine-Learning-Final-Project
-this the link that include the video and the final_voting_model.pkl file because it was to large to upload 
+this the link that include the video and the final_voting_model.pkl file because it was to large to upload .
+also i uploded the heart_2022_with_nans data without compressed it in the drive 
 https://drive.google.com/drive/folders/1Owh6XqG8YYs9Hhtlfin2uKPaDSswz92r?usp=drive_link 
 
 
