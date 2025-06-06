@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: inline-block;
+            width: 350px;
+            margin-top: 5px;
+        }
+        input[type="text"] {
+            width: 100px;
+        }
+        .form-group {
+            margin-bottom: 8px;
+        }
+        .submit-btn {
+            margin-top: 15px;
+            padding: 8px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter input values</h2>
+    <form action="/predict" method="post">
+        <div class="form-group"><label>PhysicalHealthDays:</label><input type="text" name="PhysicalHealthDays" required></div>
+        <div class="form-group"><label>MentalHealthDays:</label><input type="text" name="MentalHealthDays" required></div>
+        <div class="form-group"><label>SleepHours:</label><input type="text" name="SleepHours" required></div>
+        <div class="form-group"><label>HeightInMeters:</label><input type="text" name="HeightInMeters" required></div>
+        <div class="form-group"><label>WeightInKilograms:</label><input type="text" name="WeightInKilograms" required></div>
+        <div class="form-group"><label>BMI:</label><input type="text" name="BMI" required></div>
+        
+        <div class="form-group"><label>State_Alaska:</label><input type="text" name="State_Alaska" required></div>
+        <div class="form-group"><label>State_Arizona:</label><input type="text" name="State_Arizona" required></div>
+        <div class="form-group"><label>State_Arkansas:</label><input type="text" name="State_Arkansas" required></div>
+        <div class="form-group"><label>State_California:</label><input type="text" name="State_California" required></div>
+        <div class="form-group"><label>State_Colorado:</label><input type="text" name="State_Colorado" required></div>
+        <div class="form-group"><label>State_Connecticut:</label><input type="text" name="State_Connecticut" required></div>
+        <div class="form-group"><label>State_Delaware:</label><input type="text" name="State_Delaware" required></div>
+        <div class="form-group"><label>State_District of Columbia:</label><input type="text" name="State_District of Columbia" required></div>
+        <div class="form-group"><label>State_Florida:</label><input type="text" name="State_Florida" required></div>
+        <div class="form-group"><label>State_Georgia:</label><input type="text" name="State_Georgia" required></div>
+        <div class="form-group"><label>State_Guam:</label><input type="text" name="State_Guam" required></div>
+        <div class="form-group"><label>State_Hawaii:</label><input type="text" name="State_Hawaii" required></div>
+        <div class="form-group"><label>State_Idaho:</label><input type="text" name="State_Idaho" required></div>
+        <div class="form-group"><label>State_Illinois:</label><input type="text" name="State_Illinois" required></div>
+        <div class="form-group"><label>State_Indiana:</label><input type="text" name="State_Indiana" required></div>
+        <div class="form-group"><label>State_Iowa:</label><input type="text" name="State_Iowa" required></div>
+        <div class="form-group"><label>State_Kansas:</label><input type="text" name="State_Kansas" required></div>
+        <div class="form-group"><label>State_Kentucky:</label><input type="text" name="State_Kentucky" required></div>
+        <div class="form-group"><label>State_Louisiana:</label><input type="text" name="State_Louisiana" required></div>
+        <div class="form-group"><label>State_Maine:</label><input type="text" name="State_Maine" required></div>
+        <div class="form-group"><label>State_Maryland:</label><input type="text" name="State_Maryland" required></div>
+        <div class="form-group"><label>State_Massachusetts:</label><input type="text" name="State_Massachusetts" required></div>
+        <div class="form-group"><label>State_Michigan:</label><input type="text" name="State_Michigan" required></div>
+        <div class="form-group"><label>State_Minnesota:</label><input type="text" name="State_Minnesota" required></div>
+        <div class="form-group"><label>State_Mississippi:</label><input type="text" name="State_Mississippi" required></div>
+        <div class="form-group"><label>State_Missouri:</label><input type="text" name="State_Missouri" required></div>
+        <div class="form-group"><label>State_Montana:</label><input type="text" name="State_Montana" required></div>
+        <div class="form-group"><label>State_Nebraska:</label><input type="text" name="State_Nebraska" required></div>
+        <div class="form-group"><label>State_Nevada:</label><input type="text" name="State_Nevada" required></div>
+        <div class="form-group"><label>State_New Hampshire:</label><input type="text" name="State_New Hampshire" required></div>
+        <div class="form-group"><label>State_New Jersey:</label><input type="text" name="State_New Jersey" required></div>
+        <div class="form-group"><label>State_New Mexico:</label><input type="text" name="State_New Mexico" required></div>
+        <div class="form-group"><label>State_New York:</label><input type="text" name="State_New York" required></div>
+        <div class="form-group"><label>State_North Carolina:</label><input type="text" name="State_North Carolina" required></div>
+        <div class="form-group"><label>State_North Dakota:</label><input type="text" name="State_North Dakota" required></div>
+        <div class="form-group"><label>State_Ohio:</label><input type="text" name="State_Ohio" required></div>
+        <div class="form-group"><label>State_Oklahoma:</label><input type="text" name="State_Oklahoma" required></div>
+        <div class="form-group"><label>State_Oregon:</label><input type="text" name="State_Oregon" required></div>
+        <div class="form-group"><label>State_Pennsylvania:</label><input type="text" name="State_Pennsylvania" required></div>
+        <div class="form-group"><label>State_Puerto Rico:</label><input type="text" name="State_Puerto Rico" required></div>
+        <div class="form-group"><label>State_Rhode Island:</label><input type="text" name="State_Rhode Island" required></div>
+        <div class="form-group"><label>State_South Carolina:</label><input type="text" name="State_South Carolina" required></div>
+        <div class="form-group"><label>State_South Dakota:</label><input type="text" name="State_South Dakota" required></div>
+        <div class="form-group"><label>State_Tennessee:</label><input type="text" name="State_Tennessee" required></div>
+        <div class="form-group"><label>State_Texas:</label><input type="text" name="State_Texas" required></div>
+        <div class="form-group"><label>State_Utah:</label><input type="text" name="State_Utah" required></div>
+        <div class="form-group"><label>State_Vermont:</label><input type="text" name="State_Vermont" required></div>
+        <div class="form-group"><label>State_Virgin Islands:</label><input type="text" name="State_Virgin Islands" required></div>
+        <div class="form-group"><label>State_Virginia:</label><input type="text" name="State_Virginia" required></div>
+        <div class="form-group"><label>State_Washington:</label><input type="text" name="State_Washington" required></div>
+        <div class="form-group"><label>State_West Virginia:</label><input type="text" name="State_West Virginia" required></div>
+        <div class="form-group"><label>State_Wisconsin:</label><input type="text" name="State_Wisconsin" required></div>
+        <div class="form-group"><label>State_Wyoming:</label><input type="text" name="State_Wyoming" required></div>
+
+        <div class="form-group"><label>Sex_Male:</label><input type="text" name="Sex_Male" required></div>
+
+        <div class="form-group"><label>GeneralHealth_Fair:</label><input type="text" name="GeneralHealth_Fair" required></div>
+        <div class="form-group"><label>GeneralHealth_Good:</label><input type="text" name="GeneralHealth_Good" required></div>
+        <div class="form-group"><label>GeneralHealth_Poor:</label><input type="text" name="GeneralHealth_Poor" required></div>
+        <div class="form-group"><label>GeneralHealth_Very good:</label><input type="text" name="GeneralHealth_Very good" required></div>
+
+        <div class="form-group"><label>LastCheckupTime_Within past 2 years (1 year but less than 2 years ago):</label>
+            <input type="text" name="LastCheckupTime_Within past 2 years (1 year but less than 2 years ago)" required></div>
+        <div class="form-group"><label>LastCheckupTime_Within past 5 years (2 years but less than 5 years ago):</label>
+            <input type="text" name="LastCheckupTime_Within past 5 years (2 years but less than 5 years ago)" required></div>
+        <div class="form-group"><label>LastCheckupTime_Within past year (anytime less than 12 months ago):</label>
+            <input type="text" name="LastCheckupTime_Within past year (anytime less than 12 months ago)" required></div>
+
+        <div class="form-group"><label>PhysicalActivities_Yes:</label><input type="text" name="PhysicalActivities_Yes" required></div>
+
+        <div class="form-group"><label>RemovedTeeth_6 or more, but not all:</label><input type="text" name="RemovedTeeth_6 or more, but not all" required></div>
+        <div class="form-group"><label>RemovedTeeth_All:</label><input type="text" name="RemovedTeeth_All" required></div>
+        <div class="form-group"><label>RemovedTeeth_None of them:</label><input type="text" name="RemovedTeeth_None of them" required></div>
+
+        <div class="form-group"><label>HadAngina_Yes:</label><input type="text" name="HadAngina_Yes" required></div>
+        <div class="form-group"><label>HadStroke_Yes:</label><input type="text" name="HadStroke_Yes" required></div>
+        <div class="form-group"><label>HadAsthma_Yes:</label><input type="text" name="HadAsthma_Yes" required></div>
+        <div class="form-group"><label>HadSkinCancer_Yes:</label><input type="text" name="HadSkinCancer_Yes" required></div>
+        <div class="form-group"><label>HadCOPD_Yes:</label><input type="text" name="HadCOPD_Yes" required></div>
+        <div class="form-group"><label>HadDepressiveDisorder_Yes:</label><input type="text" name="HadDepressiveDisorder_Yes" required></div>
+        <div class="form-group"><label>HadKidneyDisease_Yes:</label><input type="text" name="HadKidneyDisease_Yes" required></div>
+        <div class="form-group"><label>HadArthritis_Yes:</label><input type="text" name="HadArthritis_Yes" required></div>
+
+        <div class="form-group"><label>HadDiabetes_No, pre-diabetes or borderline diabetes:</label>
+            <input type="text" name="HadDiabetes_No, pre-diabetes or borderline diabetes" required></div>
+        <div class="form-group"><label>HadDiabetes_Yes:</label><input type="text" name="HadDiabetes_Yes" required></div>
+        <div class="form-group"><label>HadDiabetes_Yes, but only during pregnancy (female):</label>
+            <input type="text" name="HadDiabetes_Yes, but only during pregnancy (female)" required></div>
+
+        <div class="form-group"><label>DeafOrHardOfHearing_Yes:</label><input type="text" name="DeafOrHardOfHearing_Yes" required></div>
+        <div class="form-group"><label>BlindOrVisionDifficulty_Yes:</label><input type="text" name="BlindOrVisionDifficulty_Yes" required></div>
+        <div class="form-group"><label>DifficultyConcentrating_Yes:</label><input type="text" name="DifficultyConcentrating_Yes" required></div>
+        <div class="form-group"><label>DifficultyWalking_Yes:</label><input type="text" name="DifficultyWalking_Yes" required></div>
+        <div class="form-group"><label>DifficultyDressingBathing_Yes:</label><input type="text" name="DifficultyDressingBathing_Yes" required></div>
+        <div class="form-group"><label>DifficultyErrands_Yes:</label><input type="text" name="DifficultyErrands_Yes" required></div>
+
+        <div class="form-group"><label>SmokerStatus_Current smoker - now smokes some days:</label>
+            <input type="text" name="SmokerStatus_Current smoker - now smokes some days" required></div>
+        <div class="form-group"><label>SmokerStatus_Former smoker:</label><input type="text" name="SmokerStatus_Former smoker" required></div>
+        <div class="form-group"><label>SmokerStatus_Never smoked:</label><input type="text" name="SmokerStatus_Never smoked" required></div>
+
+        <div class="form-group"><label>ECigaretteUsage_Not at all (right now):</label><input type="text" name="ECigaretteUsage_Not at all (right now)" required></div>
+        <div class="form-group"><label>ECigaretteUsage_Use them every day:</label><input type="text" name="ECigaretteUsage_Use them every day" required></div>
+        <div class="form-group"><label>ECigaretteUsage_Use them some days:</label><input type="text" name="ECigaretteUsage_Use them some days" required></div>
+
+        <div class="form-group"><label>ChestScan_Yes:</label><input type="text" name="ChestScan_Yes" required></div>
+
+        <div class="form-group"><label>RaceEthnicityCategory_Hispanic:</label><input type="text" name="RaceEthnicityCategory_Hispanic" required></div>
+        <div class="form-group"><label>RaceEthnicityCategory_Multiracial, Non-Hispanic:</label><input type="text" name="RaceEthnicityCategory_Multiracial, Non-Hispanic" required></div>
+        <div class="form-group"><label>RaceEthnicityCategory_Other race only, Non-Hispanic:</label><input type="text" name="RaceEthnicityCategory_Other race only, Non-Hispanic" required></div>
+        <div class="form-group"><label>RaceEthnicityCategory_White only, Non-Hispanic:</label><input type="text" name="RaceEthnicityCategory_White only, Non-Hispanic" required></div>
+
+        <div class="form-group"><label>AgeCategory_Age 25 to 29:</label><input type="text" name="AgeCategory_Age 25 to 29" required></div>
+        <div class="form-group"><label>AgeCategory_Age 30 to 34:</label><input type="text" name="AgeCategory_Age 30 to 34" required></div>
+        <div class="form-group"><label>AgeCategory_Age 35 to 39:</label><input type="text" name="AgeCategory_Age 35 to 39" required></div>
+        <div class="form-group"><label>AgeCategory_Age 40 to 44:</label><input type="text" name="AgeCategory_Age 40 to 44" required></div>
+        <div class="form-group"><label>AgeCategory_Age 45 to 49:</label><input type="text" name="AgeCategory_Age 45 to 49" required></div>
+        <div class="form-group"><label>AgeCategory_Age 50 to 54:</label><input type="text" name="AgeCategory_Age 50 to 54" required></div>
+        <div class="form-group"><label>AgeCategory_Age 55 to 59:</label><input type="text" name="AgeCategory_Age 55 to 59" required></div>
+        <div class="form-group"><label>AgeCategory_Age 60 to 64:</label><input type="text" name="AgeCategory_Age 60 to 64" required></div>
+        <div class
